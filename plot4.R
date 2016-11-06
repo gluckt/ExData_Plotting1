@@ -3,7 +3,7 @@ source('loadData.R')
 loadData()
 
 # Make plot
-png(filename = "plot4.png")
+png(filename = "plot4.png", bg = "transparent")
 par(mfrow = c(2,2))
 with(data, plot(datetime, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power"))
 with(data, plot(datetime, Voltage, type = "l"))

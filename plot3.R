@@ -3,7 +3,7 @@ source('loadData.R')
 loadData()
 
 # Make plot
-png(filename = "plot3.png")
+png(filename = "plot3.png", bg = "transparent")
 with(data, plot(datetime, Sub_metering_1, type = "l", ylab = "Energy sub metering"))
 with(data, lines(datetime, Sub_metering_2, col = "red"))
 with(data, lines(datetime, Sub_metering_3, col = "blue"))
