@@ -1,4 +1,7 @@
+# Reads Household power consumption data and formats it appropriately for plotting
+
 loadData <- function() {
+    # read data from Feb 2, 2007 - Feb 3, 2007
     file <- "household_power_consumption.txt"
     header <- read.table(file, nrows = 1, header = FALSE, sep =';', stringsAsFactors = FALSE)
     data <- read.table(file, header = TRUE, sep = ";", skip=grep("1/2/2007", readLines(file)), nrows = 2878, col.names = unlist(header))
